@@ -1,0 +1,18 @@
+PASS          | 01 Valid client | CL-001
+HANDLED ERROR | 02 Duplicate client | Client ID CL-001 already exists.
+HANDLED ERROR | 03 Invalid email | Enter a valid email address.
+PASS          | 04 Second valid client | CL-002
+PASS          | 05 Meeting room service | SV-101
+PASS          | 06 Equipment rental service | SV-102
+PASS          | 07 Consulting service | SV-103
+HANDLED ERROR | 08 Invalid service rate | Hourly rate must be finite and greater than zero.
+PASS          | 09 Valid reservation | RSV-0001
+HANDLED ERROR | 10 Missing client | Client CL-999 was not found.
+HANDLED ERROR | 11 Invalid duration | Equipment rentals must last 1–72 hours.
+PASS          | 12 Valid discounted reservation | RSV-0002
+PASS          | 13 Confirm reservation | Completed
+PASS          | 14 Cancel reservation | Completed
+HANDLED ERROR | 15 Repeat cancellation | Reservation was already cancelled.
+HANDLED ERROR | 16 Missing service | Service SV-999 is unavailable or missing.
+
+16 operations completed. Log: /mnt/data/software_fj_events.log

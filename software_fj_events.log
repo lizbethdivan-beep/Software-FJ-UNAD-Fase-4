@@ -1,0 +1,140 @@
+2026-11-20 18:24:11,444 | INFO | Client registered: CL-001 (Laura Moreno)
+2026-11-20 18:24:11,444 | INFO | Client registered: CL-002 (Carlos Ruiz)
+2026-11-20 18:24:11,444 | INFO | Service created: SV-101 (Meeting Room)
+2026-11-20 18:24:11,444 | INFO | Service created: SV-102 (Equipment Rental)
+2026-11-20 18:24:11,444 | INFO | Service created: SV-103 (Consulting)
+2026-11-20 18:25:50,866 | INFO | Client registered: CL-001 (Laura Moreno)
+2026-11-20 18:25:50,866 | INFO | Client registered: CL-002 (Carlos Ruiz)
+2026-11-20 18:25:50,866 | INFO | Service created: SV-101 (Meeting Room)
+2026-11-20 18:25:50,866 | INFO | Service created: SV-102 (Equipment Rental)
+2026-11-20 18:25:50,866 | INFO | Service created: SV-103 (Consulting)
+2026-11-20 18:27:47,135 | INFO | Client registered: CL-001 (Laura Moreno)
+2026-11-20 18:27:47,135 | INFO | Client registered: CL-002 (Carlos Ruiz)
+2026-11-20 18:27:47,136 | INFO | Service created: SV-101 (Meeting Room)
+2026-11-20 18:27:47,136 | INFO | Service created: SV-102 (Equipment Rental)
+2026-11-20 18:27:47,136 | INFO | Service created: SV-103 (Consulting)
+2026-11-20 18:29:38,205 | INFO | Client registered: CL-001 (Laura Moreno)
+2026-11-20 18:29:38,205 | INFO | Client registered: CL-002 (Carlos Ruiz)
+2026-11-20 18:29:38,206 | INFO | Service created: SV-101 (Meeting Room)
+2026-11-20 18:29:38,206 | INFO | Service created: SV-102 (Equipment Rental)
+2026-11-20 18:29:38,206 | INFO | Service created: SV-103 (Consulting)
+2026-11-20 18:31:11,986 | INFO | Client registered: CL-001 (Laura Moreno)
+2026-11-20 18:31:11,986 | INFO | Client registered: CL-002 (Carlos Ruiz)
+2026-11-20 18:31:11,986 | INFO | Service created: SV-101 (Meeting Room)
+2026-11-20 18:31:11,986 | INFO | Service created: SV-102 (Equipment Rental)
+2026-11-20 18:31:11,986 | INFO | Service created: SV-103 (Consulting)
+2026-11-20 18:31:31,404 | INFO | Client registered: CL-001 (Laura Moreno)
+2026-11-20 18:31:31,404 | INFO | Simulation step completed: 01 Valid client
+2026-11-20 18:31:31,404 | ERROR | Rejected simulation step 02 Duplicate client: Client ID CL-001 already exists.
+Traceback (most recent call last):
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 298, in attempt
+    result = action()
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 312, in <lambda>
+    attempt("02 Duplicate client", lambda: system.add_client("CL-001", "Another Name", "other@example.com"))
+                                           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 239, in add_client
+    raise DuplicateClientError(f"Client ID {client_id} already exists.")
+DuplicateClientError: Client ID CL-001 already exists.
+2026-11-20 18:31:31,405 | INFO | Simulation step completed: 02 Duplicate client
+2026-11-20 18:31:31,405 | ERROR | Rejected simulation step 03 Invalid email: Enter a valid email address.
+Traceback (most recent call last):
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 298, in attempt
+    result = action()
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 313, in <lambda>
+    attempt("03 Invalid email", lambda: system.add_client("CL-002", "Carlos Ruiz", "invalid-email"))
+                                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 237, in add_client
+    client = Client(client_id, name, email)
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 91, in __init__
+    self.email = email
+    ^^^^^^^^^^
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 113, in email
+    raise ValidationError("Enter a valid email address.")
+ValidationError: Enter a valid email address.
+2026-11-20 18:31:31,406 | INFO | Simulation step completed: 03 Invalid email
+2026-11-20 18:31:31,406 | INFO | Client registered: CL-002 (Carlos Ruiz)
+2026-11-20 18:31:31,406 | INFO | Simulation step completed: 04 Second valid client
+2026-11-20 18:31:31,406 | INFO | Service created: SV-101 (Meeting Room)
+2026-11-20 18:31:31,406 | INFO | Simulation step completed: 05 Meeting room service
+2026-11-20 18:31:31,406 | INFO | Service created: SV-102 (Equipment Rental)
+2026-11-20 18:31:31,406 | INFO | Simulation step completed: 06 Equipment rental service
+2026-11-20 18:31:31,406 | INFO | Service created: SV-103 (Consulting)
+2026-11-20 18:31:31,406 | INFO | Simulation step completed: 07 Consulting service
+2026-11-20 18:31:31,406 | ERROR | Rejected simulation step 08 Invalid service rate: Hourly rate must be finite and greater than zero.
+Traceback (most recent call last):
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 298, in attempt
+    result = action()
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 318, in <lambda>
+    attempt("08 Invalid service rate", lambda: system.add_service("Consulting", "SV-104", "Broken Service", -500))
+                                               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 252, in add_service
+    service = classes[kind](code, name, rate)
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 128, in __init__
+    self.hourly_rate = positive_number(hourly_rate, "Hourly rate")
+                       ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 81, in positive_number
+    raise ValidationError(f"{label} must be finite and {condition}.")
+ValidationError: Hourly rate must be finite and greater than zero.
+2026-11-20 18:31:31,407 | INFO | Simulation step completed: 08 Invalid service rate
+2026-11-20 18:31:31,407 | INFO | Reservation created: RSV-0001 | Laura Moreno | Conference Room A | $150,000.00
+2026-11-20 18:31:31,407 | INFO | Simulation step completed: 09 Valid reservation
+2026-11-20 18:31:31,407 | ERROR | Rejected simulation step 10 Missing client: Client CL-999 was not found.
+Traceback (most recent call last):
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 298, in attempt
+    result = action()
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 320, in <lambda>
+    attempt("10 Missing client", lambda: system.book("CL-999", "SV-101", 2))
+                                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 271, in book
+    client = self.find_client(client_id)
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 261, in find_client
+    raise ClientNotFoundError(f"Client {client_id} was not found.")
+ClientNotFoundError: Client CL-999 was not found.
+2026-11-20 18:31:31,407 | INFO | Simulation step completed: 10 Missing client
+2026-11-20 18:31:31,407 | ERROR | Rejected simulation step 11 Invalid duration: Equipment rentals must last 1–72 hours.
+Traceback (most recent call last):
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 298, in attempt
+    result = action()
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 321, in <lambda>
+    attempt("11 Invalid duration", lambda: system.book("CL-002", "SV-102", 200))
+                                           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 274, in book
+    total = service.calculate_cost(hours, tax_rate, discount_rate)
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 147, in calculate_cost
+    self.validate_duration(duration)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 175, in validate_duration
+    raise ValidationError("Equipment rentals must last 1–72 hours.")
+ValidationError: Equipment rentals must last 1–72 hours.
+2026-11-20 18:31:31,435 | INFO | Simulation step completed: 11 Invalid duration
+2026-11-20 18:31:31,435 | INFO | Reservation created: RSV-0002 | Carlos Ruiz | Software Architecture | $335,758.50
+2026-11-20 18:31:31,436 | INFO | Simulation step completed: 12 Valid discounted reservation
+2026-11-20 18:31:31,436 | INFO | Reservation confirmed: RSV-0001
+2026-11-20 18:31:31,436 | INFO | Simulation step completed: 13 Confirm reservation
+2026-11-20 18:31:31,436 | INFO | Reservation cancelled: RSV-0001
+2026-11-20 18:31:31,436 | INFO | Simulation step completed: 14 Cancel reservation
+2026-11-20 18:31:31,436 | ERROR | Rejected simulation step 15 Repeat cancellation: Reservation was already cancelled.
+Traceback (most recent call last):
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 298, in attempt
+    result = action()
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 325, in <lambda>
+    attempt("15 Repeat cancellation", lambda: system.get_reservation("RSV-0001").cancel())
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 216, in cancel
+    raise ReservationError("Reservation was already cancelled.")
+ReservationError: Reservation was already cancelled.
+2026-11-20 18:31:31,436 | INFO | Simulation step completed: 15 Repeat cancellation
+2026-11-20 18:31:31,436 | ERROR | Rejected simulation step 16 Missing service: Service SV-999 is unavailable or missing.
+Traceback (most recent call last):
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 298, in attempt
+    result = action()
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 326, in <lambda>
+    attempt("16 Missing service", lambda: system.book("CL-001", "SV-999", 2))
+                                          ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 272, in book
+    service = self.find_service(service_code)
+  File "c:\Users\David 2\Pictures\LIz\Programacion\Tarea 4\Software_FJ_Fase_4_base\phase4_software_fj.py", line 267, in find_service
+    raise ServiceUnavailableError(f"Service {code} is unavailable or missing.")
+ServiceUnavailableError: Service SV-999 is unavailable or missing.
+2026-11-20 18:31:31,436 | INFO | Simulation step completed: 16 Missing service
+2026-11-20 18:31:31,437 | INFO | Demonstration completed: 16 simulated operations
